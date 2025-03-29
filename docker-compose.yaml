@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: pfwjs
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.pfwjs.rule=Host(`pfwjs.${HOST}`)"
+      - "traefik.http.services.pfwjs.loadbalancer.server.port=80"
+    networks:
+      - frontend
+    volumes:
+      - ./atividades:/usr/share/nginx/html/atividades:ro
+
+networks:
+  frontend:
+    external: true
