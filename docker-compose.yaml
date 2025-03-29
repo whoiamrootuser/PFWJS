@@ -9,7 +9,7 @@ services:
       - "traefik.http.routers.pfwjs.rule=Host(`pfwjs.${HOST}`)"
       - traefik.http.routers.mantrae.entrypoints=websecure
       - traefik.http.routers.mantrae.tls.certresolver=cloudflare
-      - "traefik.http.services.pfwjs.loadbalancer.server.port=80"
+      - "traefik.http.services.pfwjs.loadbalancer.server.url=http://pfwjs"
     networks:
       - frontend
     volumes:
