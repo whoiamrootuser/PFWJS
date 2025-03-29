@@ -5,11 +5,10 @@ services:
     image: nginx:latest
     container_name: pfwjs
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.pfwjs.rule=Host(`pfwjs.${HOST}`)"
-      - traefik.http.routers.mantrae.entrypoints=websecure
-      - traefik.http.routers.mantrae.tls.certresolver=cloudflare
-      - "traefik.http.services.pfwjs.loadbalancer.server.url=http://pfwjs"
+      - traefik.enable=true
+      - traefik.http.routers.pfwjs.rule=Host(`pfwjs.${HOST}`)
+      - traefik.http.routers.pfwjs.entrypoints=websecure
+      - traefik.http.routers.pfwjs.tls.certresolver=cloudflare
     networks:
       - frontend
     volumes:
