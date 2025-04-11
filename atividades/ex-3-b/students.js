@@ -22,13 +22,10 @@ class Students extends React.Component {
         fetch(CONSTANTS.STUDENTS_DATA_URL).then((response) =>
             response.json()
         ).then((data) => {
-            console.log(data);
             this.setState({ students: data });
         }).catch((error) => {
-            console.error("Error fetching students:", error);
+            console.error("Erro ao obter alunos:", error);
         });
-
-        console.log("Students constructor");
     }
 
     selectOptions = ([
