@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: #FFFFFF;
+}
+
+header {
+ 
+    background-color: #001724;
+    color: #FFFFFF;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin: px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+
+
+section {
+    padding: 20px;
+}
+
+section ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+section ul li {
+    border: #ffffff0c solid 1px;
+    margin: 10px 0;
+    background-color: #001724;
+    border-radius: 5px;
+    height: 550px;
+}
+
+section ul li img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.movie-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-overview {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    font-size: 0.9em;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+}
+
+.movie-container:hover .movie-overview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.movie-details {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.movie-original-title {
+    font-size: 0.9em;
+    color: #A9A9A9;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.movie-rating {
+    margin: 10px 0;
+}
+
+.movie-rating .rating {
+    font-size: 1.1em;
+    color: #FFD700;
+}
+
+.movie-genre {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    background-color: #FFD700;
+    color: #4e3a01;
+    text-shadow: #ffffff 0px 1px 1px;
+    margin: 5px 0;
+}
+
+.movie-year {
+    margin-top: 10px;
+    display: block;
+    font-size: 0.9em;
+    color: #A9A9A9;
+}
+
+.loading {
+    text-align: center;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align: center;
+}
